@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register Account</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<script src="backend.js"></script>
+
+<body>
+
+<div class="container">
+  <div id="content" class="col">
+    <h1>Register Account</h1>
+    <p>
+      If you already have an account with us,
+      please login at the <a href="login.html">login page</a>.
+    </p>
+
+    <form id="form-register"
+          action="https://demo.opencart.com/en-gb?route=account/register.register&register_token=4497c678116ee6afb6e9647c90"
+          method="post"
+          data-oc-toggle="ajax">
+
+      <fieldset id="account">
+        <legend>Your Personal Details</legend>
+
+        <div class="row mb-3 required">
+          <label for="input-firstname" class="col-sm-2 col-form-label">First Name</label>
+          <div class="col-sm-10">
+            <input type="text" name="firstname" value=""
+                   placeholder="First Name"
+                   id="input-firstname" class="form-control">
+            <div id="error-firstname" class="invalid-feedback"></div>
+          </div>
+        </div>
+
+        <div class="row mb-3 required">
+          <label for="input-lastname" class="col-sm-2 col-form-label">Last Name</label>
+          <div class="col-sm-10">
+            <input type="text" name="lastname" value=""
+                   placeholder="Last Name"
+                   id="input-lastname" class="form-control">
+            <div id="error-lastname" class="invalid-feedback"></div>
+          </div>
+        </div>
+
+        <div class="row mb-3 required">
+          <label for="input-email" class="col-sm-2 col-form-label">E-Mail</label>
+          <div class="col-sm-10">
+            <input type="email" name="email" value=""
+                   placeholder="E-Mail"
+                   id="input-email" class="form-control">
+            <div id="error-email" class="invalid-feedback"></div>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Your Password</legend>
+        <div class="row mb-3 required">
+          <label for="input-password" class="col-sm-2 col-form-label">Password</label>
+          <div class="col-sm-10">
+            <input type="password" name="password" value=""
+                   placeholder="Password"
+                   id="input-password" class="form-control">
+            <div id="error-password" class="invalid-feedback"></div>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Newsletter</legend>
+        <div class="row mb-3">
+          <label class="col-sm-2 col-form-label">Subscribe</label>
+          <div class="col-sm-10">
+            <div class="form-check form-switch form-switch-lg">
+              <input type="hidden" name="newsletter" value="0">
+              <input type="checkbox" name="newsletter" value="1"
+                     id="input-newsletter" class="form-check-input">
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <div class="text-end">
+        <div class="form-check form-switch form-switch-lg form-check-reverse form-check-inline">
+          <label class="form-check-label">
+            I have read and agree to the
+            <b>Privacy Policy</b>
+          </label>
+          <input type="checkbox" name="agree" value="1" class="form-check-input">
+        </div>
+        <br><br>
+        <button type="submit" class="btn btn-primary">Continue</button>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+</body>
+</html>
